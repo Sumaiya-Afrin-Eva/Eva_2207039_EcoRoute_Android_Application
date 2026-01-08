@@ -113,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:text="Route Name:"
+                    android:text="Route:"
                     android:textColor="#081775"
                     android:textSize="14sp"
                     android:textStyle="bold" />
