@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFEF1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Navbar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="EcoRoute Logo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Eco-Route"
+                android:textColor="#081775"
+                android:textSize="22sp" />   <!--android:fontFamily="@font/brush_script_mt_italic"-->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="#2196F3"
+                android:text="LOGIN"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Hero Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingVertical="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Smarter routes."
+                android:textColor="#7C1890"
+                android:textSize="26sp" /> <!--                android:fontFamily="@font/roboto_bold"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Smoother journeys, always with us!"
+                android:textColor="#751387"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="Discover better routes, explore unseen paths and travel smarter, all in one place."
+                android:textColor="#B36734"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Search Card (Demo Display) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#E5EEFF"
+            android:clipToPadding="false"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:radius="12dp">
+
+            <!-- Spots Demo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Spots"
+                    android:textColor="#081775"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Khulna to Cox's Bazar"
+                    android:textColor="#6f6f6f"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Restaurants Demo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Restaurants"
+                    android:textColor="#081775"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chili Fries"
+                    android:textColor="#6f6f6f"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Gas Station Demo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Gas Station"
+                    android:textColor="#081775"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clean Fuel"
+                    android:textColor="#6f6f6f"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Search Button -->
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#2196F3"
+                android:cornerRadius="12dp"
+                android:text="Search"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <!-- Call-to-action -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Want to join as a Route Partner?"
+            android:textColor="#081775"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/routePartnerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#2196F3"
+            android:cornerRadius="12dp"
+            android:paddingHorizontal="24dp"
+            android:text="SIGN UP TO BE A ROUTE PARTNER"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
