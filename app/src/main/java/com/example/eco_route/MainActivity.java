@@ -2,37 +2,39 @@ package com.example.eco_route;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import com.example.ecorouteandroid.R;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button btnLogin, btnSignupPartner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home); // change if needed
-
-        btnLogin = findViewById(R.id.loginBtn);
-        btnSignupPartner = findViewById(R.id.routePartnerBtn);
-
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, UserLoginActivity.class);
-                startActivity(intent);
-            }
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_home);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
         });
 
-        btnSignupPartner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AdminLoginActivity.class);
-                startActivity(intent);
-            }
+        Button loginBtn = findViewById(R.id.loginBtn);
+        loginBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, UserLoginActivity.class);
+            startActivity(intent);
+        });
+
+        Button routePartnerBtn = findViewById(R.id.routePartnerBtn);
+        routePartnerBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AdminLoginActivity.class);
+            startActivity(intent);
         });
     }
 }
