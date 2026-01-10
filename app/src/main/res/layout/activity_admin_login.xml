@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDEDED"
@@ -132,10 +134,10 @@
                 android:layout_height="50dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#2196F3"
-                android:cornerRadius="12dp"
                 android:text="Register"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                app:cornerRadius="12dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -157,7 +159,7 @@
                     android:text="Login"
                     android:textColor="#024ae4"
                     android:textSize="14sp"
-                    android:underline="true" />
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -179,7 +181,7 @@
                     android:text="Terms of Service"
                     android:textColor="#024ae4"
                     android:textSize="14sp"
-                    android:underline="true" />
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -200,8 +202,7 @@
                     android:layout_height="wrap_content"
                     android:text="Privacy Policy"
                     android:textColor="#024ae4"
-                    android:textSize="14sp"
-                    android:underline="true" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </LinearLayout>

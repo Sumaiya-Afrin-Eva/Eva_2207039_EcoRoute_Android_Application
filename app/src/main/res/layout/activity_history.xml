@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F6F2"
@@ -10,25 +11,41 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingBottom="16dp">
 
-        <TextView
-            android:id="@+id/titleText"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search History"
-            android:textColor="#081775"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <TextView
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search History"
+                android:textColor="#081775"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Previously searched routes and activities"
+                android:textColor="#6F6F6F"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/deleteAllButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Previously searched routes and activities"
-            android:textColor="#6F6F6F"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp"/>
+            android:layout_height="40dp"
+            android:text="Delete All"
+            android:textAllCaps="false"
+            android:backgroundTint="#DC2020"
+            android:textColor="@android:color/white"
+            android:elevation="4dp" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -50,13 +67,13 @@
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:text="Back"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
             android:backgroundTint="#DC2020"
+            android:elevation="4dp"
             android:paddingStart="24dp"
             android:paddingEnd="24dp"
-            android:elevation="4dp" />
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
 </LinearLayout>

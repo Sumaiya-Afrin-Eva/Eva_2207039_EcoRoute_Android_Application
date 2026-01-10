@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -7,123 +8,123 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal">
+        android:padding="24dp">
 
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/logo"
+            android:layout_marginBottom="16dp"
             android:contentDescription="App Logo"
-            android:layout_marginBottom="16dp" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:text="Eco-Route"
-            android:textSize="26sp"
-            android:textStyle="bold"
             android:textColor="#081775"
-            android:layout_marginBottom="24dp" />
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Continue with your account"
-            android:textSize="22sp"
-            android:textStyle="bold"
             android:textColor="#000000"
-            android:layout_marginBottom="8dp" />
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:text="Use the verification code we sent to your email to log in."
-            android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginBottom="24dp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:text="6-digit verification code"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
             android:gravity="center"
-            android:layout_marginBottom="24dp">
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/code1"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_margin="4dp"
+                android:background="@android:drawable/edit_text"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textSize="18sp"
-                android:background="@android:drawable/edit_text" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/code2"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_margin="4dp"
+                android:background="@android:drawable/edit_text"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textSize="18sp"
-                android:background="@android:drawable/edit_text" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/code3"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_margin="4dp"
+                android:background="@android:drawable/edit_text"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textSize="18sp"
-                android:background="@android:drawable/edit_text" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/code4"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_margin="4dp"
+                android:background="@android:drawable/edit_text"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textSize="18sp"
-                android:background="@android:drawable/edit_text" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/code5"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_margin="4dp"
+                android:background="@android:drawable/edit_text"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textSize="18sp"
-                android:background="@android:drawable/edit_text" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/code6"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_margin="4dp"
+                android:background="@android:drawable/edit_text"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textSize="18sp"
-                android:background="@android:drawable/edit_text" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <TextView
