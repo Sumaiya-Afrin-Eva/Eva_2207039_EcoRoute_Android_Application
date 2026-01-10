@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ecorouteandroid"
+    namespace = "com.example.eco_route"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.ecorouteandroid"
+        applicationId = "com.example.eco_route"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
