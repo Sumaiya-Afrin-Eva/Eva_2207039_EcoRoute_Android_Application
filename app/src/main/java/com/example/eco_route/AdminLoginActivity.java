@@ -9,7 +9,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.eco_route.AdminActivity;
+import com.example.ecorouteandroid.R;
 
 public class AdminLoginActivity extends AppCompatActivity {
 
@@ -41,6 +41,8 @@ public class AdminLoginActivity extends AppCompatActivity {
                         .show();
 
             } else {
+                RouteRepository.businessName = businessName.getText().toString();
+
                 Intent intent = new Intent(
                         AdminLoginActivity.this,
                         AdminActivity.class
