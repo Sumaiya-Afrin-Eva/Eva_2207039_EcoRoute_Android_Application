@@ -10,16 +10,48 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Eco_Route">
+        android:theme="@style/Theme.EcoRouteAndroid">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".UserLoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AdminLoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EmailLoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CodeVerificationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ManageRouteActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
