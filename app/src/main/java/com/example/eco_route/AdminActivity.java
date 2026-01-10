@@ -8,6 +8,8 @@ import android.widget.*;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.eco_route.R;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -153,7 +155,7 @@ public class AdminActivity extends AppCompatActivity {
 
     private void addRouteChip(String route) {
         View chip = LayoutInflater.from(this)
-                .inflate(R.layout.activity_item_selection, selectedRoutesContainer, false);
+                .inflate(R.layout.item_selection, selectedRoutesContainer, false);
 
         TextView routeName = chip.findViewById(R.id.routeName);
         ImageView remove = chip.findViewById(R.id.removeRoute);

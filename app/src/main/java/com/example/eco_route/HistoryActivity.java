@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ecorouteandroid.R;
+import com.example.eco_route.R;
 
 import java.util.ArrayList;
 import java.util.HashSet;

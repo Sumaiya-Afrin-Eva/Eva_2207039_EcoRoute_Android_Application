@@ -10,7 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.ecorouteandroid.R;
+import com.example.eco_route.R;
 
 public class MainActivity extends AppCompatActivity {
 

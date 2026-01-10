@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ecorouteandroid.R;
+import com.example.eco_route.R;
 
 import java.util.ArrayList;
 import java.util.List;

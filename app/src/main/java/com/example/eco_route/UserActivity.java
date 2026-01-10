@@ -16,7 +16,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ecorouteandroid.R;
+import com.example.eco_route.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

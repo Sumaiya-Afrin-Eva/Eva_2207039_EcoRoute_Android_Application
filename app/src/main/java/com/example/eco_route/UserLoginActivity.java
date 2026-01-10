@@ -7,7 +7,7 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ecorouteandroid.R;
+import com.example.eco_route.R;
 
 public class UserLoginActivity extends AppCompatActivity {
 
