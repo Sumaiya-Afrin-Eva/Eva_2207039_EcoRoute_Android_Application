@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585894157020",
+    "project_id": "ecoroute-dcb23",
+    "storage_bucket": "ecoroute-dcb23.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585894157020:android:f2dde48b83c3b037537219",
+        "android_client_info": {
+          "package_name": "com.example.ecoroute"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACBDPrnPvto5cBCMGyUVQphZOf-Dqv7mk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
