@@ -18,7 +18,7 @@ public class AdminActivity extends AppCompatActivity {
 
     Spinner originSpinner, destinationSpinner, routeSpinner;
     LinearLayout selectedRoutesContainer;
-    EditText fuelField, timeField, distanceField, priceField;
+    EditText fuelField, timeField, distanceField, priceField, restaurantField, fuelStationField;
     Button saveRouteButton, resetButton;
 
     List<String> allPlaces;
@@ -58,6 +58,8 @@ public class AdminActivity extends AppCompatActivity {
         timeField = findViewById(R.id.timeField);
         distanceField = findViewById(R.id.distanceField);
         priceField = findViewById(R.id.priceField);
+        restaurantField = findViewById(R.id.restaurantField);
+        fuelStationField = findViewById(R.id.fuelStationField);
 
         saveRouteButton = findViewById(R.id.saveRouteButton);
         resetButton = findViewById(R.id.resetButton);
@@ -105,7 +107,8 @@ public class AdminActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
     }
 
@@ -149,7 +152,8 @@ public class AdminActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
     }
 
@@ -169,7 +173,6 @@ public class AdminActivity extends AppCompatActivity {
 
         selectedRoutesContainer.addView(chip);
     }
-
     private void setupButtons() {
         saveRouteButton.setOnClickListener(v -> {
             if (originSpinner.getSelectedItemPosition() == 0 ||
@@ -192,7 +195,9 @@ public class AdminActivity extends AppCompatActivity {
                         Double.parseDouble(distanceField.getText().toString()),
                         Double.parseDouble(timeField.getText().toString()),
                         Double.parseDouble(fuelField.getText().toString()),
-                        Double.parseDouble(priceField.getText().toString())
+                        Double.parseDouble(priceField.getText().toString()),
+                        restaurantField.getText().toString().trim(),
+                        fuelStationField.getText().toString().trim()
                 );
 
                 RouteRepository.addRoute(route);
@@ -206,6 +211,8 @@ public class AdminActivity extends AppCompatActivity {
             timeField.setText("");
             distanceField.setText("");
             priceField.setText("");
+            restaurantField.setText("");
+            fuelStationField.setText("");
             selectedRoutes.clear();
             selectedRoutesContainer.removeAllViews();
 

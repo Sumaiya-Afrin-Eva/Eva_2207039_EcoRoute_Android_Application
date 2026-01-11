@@ -139,8 +139,12 @@ public class UserActivity extends AppCompatActivity {
 
                     ((TextView) card.findViewById(R.id.costText))
                             .setText("Cost: Rs " + route.cost);
+                    ((TextView) card.findViewById(R.id.restaurantText))
+                            .setText("Restaurants: " + (route.restaurant != null && !route.restaurant.isEmpty() ? route.restaurant : "N/A"));
 
-                    // Select Route → Save to history
+                    ((TextView) card.findViewById(R.id.fuelStationText))
+                            .setText("Fuel Stations: " + (route.fuelStation != null && !route.fuelStation.isEmpty() ? route.fuelStation : "N/A"));
+
                     Button selectRouteBtn =
                             card.findViewById(R.id.selectRouteButton);
 
@@ -167,7 +171,9 @@ public class UserActivity extends AppCompatActivity {
                                         route.time + "|" +
                                         route.fuel + "|" +
                                         String.format("%.2f", route.getEcoScore()) + "|" +
-                                        route.cost;
+                                        route.cost + "|" +
+                                        (route.restaurant != null ? route.restaurant : "") + "|" +
+                                        (route.fuelStation != null ? route.fuelStation : "");
 
                         updatedHistory.add(historyItem);
 

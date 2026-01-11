@@ -11,8 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.eco_route.R;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -52,6 +50,17 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         holder.ecoScoreText.setText("Eco Score: " + model.ecoScore);
         holder.costText.setText("Cost: Rs " + model.cost);
 
+        // Display new fields - Add null checks
+        if (holder.restaurantText != null) {
+            holder.restaurantText.setText("Restaurants: " +
+                    (model.restaurant != null && !model.restaurant.isEmpty() ? model.restaurant : "N/A"));
+        }
+
+        if (holder.fuelStationText != null) {
+            holder.fuelStationText.setText("Fuel Stations: " +
+                    (model.fuelStation != null && !model.fuelStation.isEmpty() ? model.fuelStation : "N/A"));
+        }
+
         holder.deleteButton.setOnClickListener(v -> {
 
             SharedPreferences prefs =
@@ -83,7 +92,8 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView businessName, routeText, distanceText,
-                timeText, fuelText, ecoScoreText, costText;
+                timeText, fuelText, ecoScoreText, costText,
+                restaurantText, fuelStationText; // Added new fields
         Button deleteButton;
 
         ViewHolder(View itemView) {
@@ -96,8 +106,9 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             fuelText = itemView.findViewById(R.id.fuelText);
             ecoScoreText = itemView.findViewById(R.id.ecoScoreText);
             costText = itemView.findViewById(R.id.costText);
+            restaurantText = itemView.findViewById(R.id.restaurantText); // Added
+            fuelStationText = itemView.findViewById(R.id.fuelStationText); // Added
             deleteButton = itemView.findViewById(R.id.deleteButton);
         }
     }
-
 }

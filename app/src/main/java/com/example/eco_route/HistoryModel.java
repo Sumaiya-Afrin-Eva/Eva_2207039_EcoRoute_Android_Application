@@ -1,6 +1,6 @@
 package com.example.eco_route;
-public class HistoryModel {
 
+public class HistoryModel {
     public String businessName;
     public String routePath;
     public String distance;
@@ -8,6 +8,8 @@ public class HistoryModel {
     public String fuel;
     public String ecoScore;
     public String cost;
+    public String restaurant;
+    public String fuelStation;
     public String rawData;
 
     public HistoryModel(String rawData) {
@@ -22,5 +24,17 @@ public class HistoryModel {
         fuel = parts[4];
         ecoScore = parts[5];
         cost = parts[6];
+
+        if (parts.length > 7) {
+            restaurant = parts[7];
+        } else {
+            restaurant = "";
+        }
+
+        if (parts.length > 8) {
+            fuelStation = parts[8];
+        } else {
+            fuelStation = "";
+        }
     }
 }
