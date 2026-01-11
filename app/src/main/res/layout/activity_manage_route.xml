@@ -171,6 +171,42 @@
                 android:inputType="numberDecimal"
                 android:padding="12dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Restaurant:"
+                android:textColor="#081775"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/restaurantField"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Enter restaurant info"
+                android:padding="12dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Fuel Station:"
+                android:textColor="#081775"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fuelStationField"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Enter fuel station info"
+                android:padding="12dp" />
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -206,8 +242,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#E01616"
+                android:backgroundTint="#BFC3C7"
                 android:text="Back"
+                android:textColor="#070707"
+                app:cornerRadius="12dp" />
+
+            <Button
+                android:id="@+id/deleteRouteButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#E01616"
+                android:text="Delete Route"
                 android:textColor="#FFFFFF"
                 app:cornerRadius="12dp" />
 
