@@ -50,7 +50,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         holder.ecoScoreText.setText("Eco Score: " + model.ecoScore);
         holder.costText.setText("Cost: Rs " + model.cost);
 
-        // Display new fields - Add null checks
         if (holder.restaurantText != null) {
             holder.restaurantText.setText("Restaurants: " +
                     (model.restaurant != null && !model.restaurant.isEmpty() ? model.restaurant : "N/A"));
@@ -93,7 +92,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
         TextView businessName, routeText, distanceText,
                 timeText, fuelText, ecoScoreText, costText,
-                restaurantText, fuelStationText; // Added new fields
+                restaurantText, fuelStationText;
         Button deleteButton;
 
         ViewHolder(View itemView) {
@@ -106,8 +105,8 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             fuelText = itemView.findViewById(R.id.fuelText);
             ecoScoreText = itemView.findViewById(R.id.ecoScoreText);
             costText = itemView.findViewById(R.id.costText);
-            restaurantText = itemView.findViewById(R.id.restaurantText); // Added
-            fuelStationText = itemView.findViewById(R.id.fuelStationText); // Added
+            restaurantText = itemView.findViewById(R.id.restaurantText);
+            fuelStationText = itemView.findViewById(R.id.fuelStationText);
             deleteButton = itemView.findViewById(R.id.deleteButton);
         }
     }

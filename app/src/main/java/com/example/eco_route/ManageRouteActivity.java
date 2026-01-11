@@ -165,7 +165,7 @@ public class ManageRouteActivity extends AppCompatActivity {
         if (fuelField.getText().toString().isEmpty() ||
                 timeField.getText().toString().isEmpty() ||
                 ticketField.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please fill all the required fields", Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
