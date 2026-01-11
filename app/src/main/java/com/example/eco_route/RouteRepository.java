@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RouteRepository {
-
     private static final List<RouteModel> routes = new ArrayList<>();
     public static String businessName = "";
 
     public static void addRoute(RouteModel route) {
         routes.add(route);
+    }
+
+    public static void clearRoutes() {
+        routes.clear();
     }
 
     public static List<RouteModel> getRoutes() {
@@ -36,4 +39,18 @@ public class RouteRepository {
         }
     }
 
+    public static void deleteRouteByKey(String routeKey) {
+        RouteModel routeToDelete = null;
+        for (RouteModel route : routes) {
+            String key = String.join(" → ", route.routePath);
+            if (key.equals(routeKey)) {
+                routeToDelete = route;
+                break;
+            }
+        }
+
+        if (routeToDelete != null) {
+            routes.remove(routeToDelete);
+        }
+    }
 }

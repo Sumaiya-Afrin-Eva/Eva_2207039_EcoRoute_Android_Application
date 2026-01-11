@@ -117,34 +117,27 @@ public class ManageRouteActivity extends AppCompatActivity {
 
             Toast.makeText(this, "Route updated successfully", Toast.LENGTH_SHORT).show();
 
-            // Refresh the spinner to show any changes
             refreshRouteSpinner();
         });
 
-        // DELETE ROUTE BUTTON FUNCTIONALITY
         deleteRouteButton.setOnClickListener(v -> {
             if (selectedRoute == null) {
                 Toast.makeText(this, "Select a route first", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Show confirmation dialog
             new AlertDialog.Builder(this)
                     .setTitle("Delete Route")
                     .setMessage("Are you sure you want to delete this route?\n\n" +
                             "Route: " + String.join(" → ", selectedRoute.routePath) + "\n" +
                             "Business: " + selectedRoute.businessName)
                     .setPositiveButton("Delete", (dialog, which) -> {
-                        // Get the route key for deletion
                         String routeKey = String.join(" → ", selectedRoute.routePath);
 
-                        // Delete from repository (you need to add deleteRoute method to RouteRepository)
                         deleteRouteFromRepository(routeKey);
 
-                        // Clear the form
                         clearForm();
 
-                        // Refresh the spinner
                         refreshRouteSpinner();
 
                         Toast.makeText(ManageRouteActivity.this,
@@ -166,7 +159,6 @@ public class ManageRouteActivity extends AppCompatActivity {
     }
 
     private void deleteRouteFromRepository(String routeKey) {
-        // Use the new delete method in RouteRepository
         RouteRepository.deleteRouteByKey(routeKey);
     }
     private boolean validateInputs() {
