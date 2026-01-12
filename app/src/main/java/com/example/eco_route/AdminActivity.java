@@ -8,8 +8,6 @@ import android.widget.*;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.eco_route.R;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -94,7 +92,7 @@ public class AdminActivity extends AppCompatActivity {
                 String selectedOrigin = allPlaces.get(position);
 
                 List<String> destinationList = new ArrayList<>(allPlaces);
-                destinationList.remove(0); // remove "Select Origin"
+                destinationList.remove(0);
                 destinationList.remove(selectedOrigin);
                 destinationList.add(0, "Select Destination");
 

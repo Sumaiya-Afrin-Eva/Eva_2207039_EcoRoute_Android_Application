@@ -10,8 +10,6 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.eco_route.R;
-
 public class EmailLoginActivity extends AppCompatActivity {
 
     @Override
